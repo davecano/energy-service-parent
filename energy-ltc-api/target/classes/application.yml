@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: energy-ltc-service
+  datasource:
+    url: jdbc:mysql://192.168.50.198:3306/user-center?autoReconnect=true&useServerPreparedStmts=false&rewriteBatchedStatements=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: 3er4#ER$
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 192.168.50.198
+    port: 6379
+    password: tiansu999999
+    database: 0
+    lettuce:
+      pool:
+        max-active: 10
+        min-idle: 5
+        max-idle: 10
+        max-wait: 30000ms
+
+
+mybatis-plus:
+  typeAliasesPackage: com.tiansu.energy.ltc.*.*.domain.entity
+  mapper-locations: classpath:/mapper/**/*.xml
+server:
+  port: 10086
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露所有端点
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
+energy:
+  xss:
+    enabled: true
+    urlPatterns: /*
+    excludes: ''
+  log:
+    enable: false
+jwt:
+  secret: ts123456
+
+minio:
+  endpoint: 192.168.50.29
+  port: 9006
+  accessKey: minioadmin
+  secretKey: minioadmin
+  secure: false
+  bucketName: "hope-bucket"
+  configDir: "/home/data/"

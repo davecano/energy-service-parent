@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "energy",
+      "type": "com.tiansu.energy.ltc.config.system.EnergyOtherConfig",
+      "sourceType": "com.tiansu.energy.ltc.config.system.EnergyOtherConfig"
+    },
+    {
+      "name": "minio",
+      "type": "com.tiansu.energy.ltc.config.MinioConfig",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "energy.log",
+      "type": "com.tiansu.energy.ltc.config.system.LogConfig",
+      "sourceType": "com.tiansu.energy.ltc.config.system.EnergyOtherConfig"
+    },
+    {
+      "name": "energy.xss",
+      "type": "com.tiansu.energy.ltc.config.system.XssConfig",
+      "sourceType": "com.tiansu.energy.ltc.config.system.EnergyOtherConfig"
+    },
+    {
+      "name": "minio.access-key",
+      "type": "java.lang.String",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    },
+    {
+      "name": "minio.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    },
+    {
+      "name": "minio.config-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    },
+    {
+      "name": "minio.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    },
+    {
+      "name": "minio.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "minio.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    },
+    {
+      "name": "minio.secure",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.tiansu.energy.ltc.config.MinioConfig"
+    }
+  ],
+  "hints": []
+}
